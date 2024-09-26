@@ -27,6 +27,7 @@ requirements:
 test:
   source_files:
     - src/pynwb/tests
+    - examples
   requires:
     - pip
     - pytest
