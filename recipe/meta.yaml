@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ndx-pose-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ndx_pose-{{ version }}.tar.gz
   sha256: d6e8f99274e579fe13b2ae43ec78a0685addff2ff4be538343a33871d4a331f5
 
 build:
