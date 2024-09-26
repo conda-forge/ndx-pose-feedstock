@@ -18,18 +18,21 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - hatchling
   run:
     - python >=3.8
     - pynwb >=2.6.0
     - hdmf >=3.13.0
 
 test:
+  requires:
+    - pip
+    - pytest
   imports:
     - ndx_pose
   commands:
     - pip check
-  requires:
-    - pip
+    - pytest
 
 about:
   home: https://github.com/rly/ndx-pose
