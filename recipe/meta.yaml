@@ -32,7 +32,7 @@ test:
     - ndx_pose
   commands:
     - pip check
-    - pytest
+    - pytest -vv
 
 about:
   home: https://github.com/rly/ndx-pose
