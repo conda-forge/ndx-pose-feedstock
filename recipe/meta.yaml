@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ndx_pose-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ndx_pose-{{ version }}.tar.gz
   sha256: 188b68cc7b20644b9aae2a403ff364f4e85fd7db0a8528ac3c197088800ec8f6
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - pynwb >=2.6.0
     - hdmf >=3.13.0
 
@@ -31,6 +31,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   imports:
     - ndx_pose
   commands:
