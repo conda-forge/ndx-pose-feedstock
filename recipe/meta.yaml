@@ -1,13 +1,13 @@
 {% set name = "ndx-pose" %}
-{% set version = "0.2.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ndx_pose-{{ version }}.tar.gz
-  sha256: 69a9a139363ccf8406f36752146d345914330e69921b9734db2425fc9808a0a1
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/ndx_pose-{{ version }}.tar.gz
+  sha256: 5c5aaf5d56cd612e21bfee0841a14406f1414673f05d549e02170fc86e2aa75f
 
 build:
   noarch: python
@@ -18,11 +18,11 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - hatchling
+    - hatchling >=1.27
   run:
     - python >={{ python_min }}
-    - pynwb >=2.6.0
-    - hdmf >=3.13.0
+    - pynwb >=4.0.0
+    - hdmf >=6.1.0
 
 test:
   source_files:
