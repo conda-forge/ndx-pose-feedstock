@@ -18,11 +18,11 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - hatchling
+    - hatchling >=1.27
   run:
     - python >={{ python_min }}
-    - pynwb >=2.6.0
-    - hdmf >=3.13.0
+    - pynwb >=4.0.0
+    - hdmf >=6.1.0
 
 test:
   source_files:
